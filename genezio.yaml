@@ -20,4 +20,3 @@ frontend:
       - npm install @genezio-sdk/weather-typescript-template_us-east-1
       - npm install
       - npm run build
-  subdomain: emerald-past-zebra
