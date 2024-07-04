@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@genezio-sdk/weather-typescript-template": "^1.0.0-prod",
     "@genezio-sdk/weather-typescript-template_us-east-1": "^1.0.0-prod",
     "@genezio/vite-plugin-genezio": "^1.0.4",
     "@material-tailwind/react": "^2.1.5",
@@ -23,7 +24,7 @@
     "@types/react-dom": "^18.2.15",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
-    "@vitejs/plugin-react-swc": "^3.5.0",
+    "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.53.0",
     "eslint-plugin-react-hooks": "^4.6.0",

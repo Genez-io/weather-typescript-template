@@ -1,16 +1,26 @@
 name: weather-typescript-template
 region: us-east-1
-language: ts
-cloudProvider: genezio
-scripts:
-  preBackendDeploy: npm install
-  preFrontendDeploy: npm install
-    @genezio-sdk/weather-typescript-template_us-east-1 && npm install && npm run
-    build
-  preStartLocal: cd server && npm install
+yamlVersion: 2
+backend:
+  path: server
+  language:
+    name: ts
+    packageManager: npm
+  scripts:
+    deploy: npm install
+    local:
+      - npm install
 frontend:
-  path: client/dist
-packageManager: npm
-workspace:
-  backend: server
-  frontend: client
+  path: client
+  publish: dist
+  sdk:
+    language: ts
+  scripts:
+    deploy:
+      - npm install @genezio-sdk/${{projectName}}@1.0.0-${{stage}}
+      - npm install
+      - npm run build
+    start:
+      - npm install
+      - npm run dev
+  subdomain: violet-interesting-wasp
